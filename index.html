@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola James Azevedo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+      <!-- Capa com imagem de fundo -->
+  <div class="capa">
+   <img src="C:\Users\Lenovo\Desktop\James\imagem\foto_capa.jpeg" alt="James de Azevedo ">
+   <div class="texto">
+    <h1>Ceti Prof. James Azevedo</h1>
+    <p>Educação Técnica e Profissionalizante</p>
+ 
+   </div>
+     </div>
+
+  <!-- Menu de navegação -->
+  <nav>
+    <button onclick="showSection('inicio')">Início</button>
+    <button onclick="showSection('cursos')">Cursos</button>
+    <button onclick="showSection('localizacao')">Localização</button>
+    <button onclick="showSection('inscricao')">Inscrição</button>
+    <button onclick="showSection('certificados')">Documentos</button>
+    <button onclick="showSection('lanche')">Lanche</button>
+    <button onclick="showSection('absorventes')">Absorventes</button>
+     <button onclick="location.assign('https://portal.seduc.pi.gov.br/#!/')">Área do professor</button>
+  </nav>
+
+  <!-- Seções -->
+  <section id="inicio" class="section active">
+    <h2>Bem-vindo!</h2>
+   
+
+    <p>A Escola James Azevedo oferece cursos técnicos em diversas áreas, com foco em prática, qualidade e empregabilidade. Nossa missão é preparar profissionais competentes para o mercado de trabalho, com ensino de excelência e infraestrutura moderna.</p>
+    <p>Estamos há mais de 15 anos formando técnicos nas áreas de saúde, administração e tecnologia, com mais de 5.000 alunos formados.</p>
+  </section>
+
+  <section id="cursos" class="section">
+    <h2>Cursos Disponíveis</h2>
+    <ul>
+      <li><strong>Administração</strong> - Duração: 18 meses | Período: Manhã/Tarde/Noite</li>
+      <li><strong>Informática</strong> - Duração: 24 meses | Período: Manhã/Tarde</li>
+      <li><strong>Enfermagem</strong> - Duração: 24 meses | Período: Tarde/Noite</li>
+      <li><strong>Agente de Saúde</strong> - Duração: 12 meses | Período: Manhã/Tarde</li>
+    </ul>
+    <p>Entre em contato para conhecer melhor cada curso e verificar a disponibilidade de turmas.</p>
+  </section>
+
+  <section id="localizacao" class="section">
+    <h2>Localização</h2>
+   <p>Estamos localizados na zona norte Teresina-PI, com fácil acesso por todas as áreas da zona norte .</p>
+    <div style="width: 100%; height: 300px; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin: 20px 0;">
+      <iframe src="https://www.google.com/maps?q=Teresina-PI&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+    </div>
+    <p><strong>Endereço:</strong>Rua Pedro Brito, - Alvorada, Teresina - PI</p>
+    <p><strong>Telefone:</strong> (86) 3222-1234</p>
+    <p><strong>Email:</strong> contato@escolajamesazevedo.com.br</p>
+  </section>
+
+  <section id="inscricao" class="section">
+    <h2>Formulário de Inscrição</h2>
+    <form>
+      <input type="text" placeholder="Nome Completo" required>
+      <p>Data NAscimento</p>
+      <input type="date">
+ 
+
+      <input type="text" placeholder="CPF" required>
+      <input type="email" placeholder="E-mail" required>
+      <input type="tel" placeholder="Telefone para contato" required>
+      <select required>
+        <option value="">Escolha um curso</option>
+        <option>Administração</option>
+        <option>Informática</option>
+        <option>Enfermagem</option>
+        <option>Agente de Saúde</option>
+      </select>
+      <button type="submit">Enviar Inscrição</button>
+    </form>
+  </section>
+
+  <section id="certificados" class="section">
+    <h2>Solicitação de Documentos</h2>
+    <p>Preencha o formulário abaixo para solicitar segunda via de certificados ou históricos escolares.</p>
+    <form>
+      <input type="text" placeholder="Nome Completo" required>
+      <input type="text" placeholder="Nome da Mãe" required>
+      <input type="text" placeholder="Ano de Conclusão" required>
+      <input type="text" placeholder="CPF" required>
+      <select required>
+        <option value="">Tipo de Documento</option>
+        <option>Certificado de Conclusão</option>
+        <option>Histórico Escolar</option>
+        <option>Ambos</option>
+      </select>
+      <button type="submit">Solicitar</button>
+    </form>
+  </section>
+
+  <section id="lanche" class="section">
+    <h2>Reserva de Lanche</h2>
+    <p>Faça a reserva do seu lanche com pelo menos 1 hora de antecedência.</p>
+    <form>
+      <input type="text" placeholder="Digite sua Matricula" required>
+      <input type="text" placeholder="Turma" required>
+      <input type="date" required>
+      <select required>
+        <option value="">Selecione o lanche</option>
+        <option>Sanduíche Natural</option>
+        <option>Salgado Assado</option>
+        <option>Bolo + Suco</option>
+        <option>Vitamina de Frutas</option>
+      </select>
+      <button type="submit">Reservar</button>
+    </form>
+  </section>
+
+  <section id="absorventes" class="section">
+    <h2>Solicitação de Kit de Absorventes</h2>
+    <p>Programa de distribuição gratuita de absorventes higiênicos para alunas.</p>
+    <form>
+      <input type="text" placeholder="Nome Completo" required>
+      <input type="text" placeholder="Turma" required>
+      <input type="number" placeholder="Quantidade" min="1" max="5" required>
+      <input type="date" required>
+      <button type="submit">Solicitar</button>
+    </form>
+  </section>
+
+  <!-- Slides (Carrossel de imagens) -->
+  <div class="slides-container">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <div style="height: 300px; background: #003366; display: flex; align-items: center; justify-content: center; color: white;">
+          <img src="C:\Users\Lenovo\Desktop\James\imagem\evento.jpeg" alt="iamagem 1">
+        </div>
+      </div>
+      <div class="slide">
+        <div style="height: 300px; background: #005599; display: flex; align-items: center; justify-content: center; color: white;">
+          <img src="C:\Users\Lenovo\Desktop\James\imagem\lab.jpeg" alt="iamagem 1">
+        </div>
+      </div>
+      <div class="slide">
+        <div style="height: 300px; background: #0077cc; display: flex; align-items: center; justify-content: center; color: white;">
+          <img src="C:\Users\Lenovo\Desktop\James\imagem\sala.jpeg" alt="iamagem 3">
+        </div>
+   </div>
+   <div class="slide">
+        <div style="height: 300px; background: #0077cc; display: flex; align-items: center; justify-content: center; color: white;">
+          <img src="C:\Users\Lenovo\Desktop\James\imagem\lab2.jpeg" alt="iamagem 4">
+        </div>
+   </div>
+    </div>
+    <div class="navigation">
+      <button onclick="previousSlide()">&#10094;</button>
+      <button onclick="nextSlide()">&#10095;</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>©️ 2025 Escola James Azevedo. Todos os direitos reservados.</p>
+    <p>Desenvolvido por C & K Criações.</p>
+  </footer>
+
+</body>
+
+</html>
