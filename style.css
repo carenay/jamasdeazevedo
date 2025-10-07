@@ -16,7 +16,7 @@
     .capa img {
     
     
-      background:url('C:\Users\Lenovo\Desktop\james_azevedo\imagem\foto_capa.jpeg') no-repeat center center;
+      /*background:url('C:\Users\Lenovo\Desktop\james_azevedo\imagem\foto_capa.jpeg') no-repeat center center;*/
       background-size: cover; 
       color:white;
       text-align: center;
@@ -54,9 +54,7 @@
       text-align: center;
       margin-top: -150px;
       width: 100%;
-      
-      
-      margin-right: 100px;
+     margin-right: 100px;
 
       
     }
@@ -280,9 +278,10 @@ margin-top: 1px;
       }
       
       nav button {
-        min-width: 95px;
-        padding: 8px 5px;
-        font-size: 0.75em;
+        min-width: 80px;
+        padding: 5px 5px;
+        font-size: 0.70em;
+        width: 30px;
       }
       
       .section {
