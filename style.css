@@ -1,315 +1,276 @@
-* {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background-color: #f2f4f8;
-      color: #333;
-    }
-    
-    /* Capa com imagem de fundo */
-    
-    .capa img {
-    
-    
-      /*background:url('C:\Users\Lenovo\Desktop\james_azevedo\imagem\foto_capa.jpeg') no-repeat center center;*/
-      background-size: cover; 
-      color:white;
-      text-align: center;
-      width: 100%;
-      height:400px;
-      object-fit: cover;
-      image-rendering:pixelated;
-      
-    }    
-    .texto{
-      position:absolute ;
-      width: 50%;
-       transform: translateY(-50%);
-      color: white;
-      text-align: center;
-      padding: 5px;  
-      margin-left: 400px;  
-      text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
-      font-size: 1.2rem;
+ * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: linear-gradient(180deg, #f7fbff 0%, #e4f0ff 100%);
+        color: #333;
+      }
 
-}
-@media screen {
-  .texto{
-  
-    font-size: 1.2rem;
-  }
-  
-}
-.texto h1 {
-      position:absolute;
-        font-size: 3.5rem;
-        text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
-       color: mediumblue;
+      /* Capa */
+      .capa {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+      }
+
+      .capa img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(70%) contrast(1.1) saturate(1.2);
+      }
+
+      .capa::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(242, 243, 245, 0.6),
+          rgba(126, 125, 122, 0.5)
+        );
+        mix-blend-mode: multiply;
+      }
+
+      .texto {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #8a8787ef;
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .texto h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #a6affde8;
+      }
+
+      .texto p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color:#a6affde8;
+      }
+
+      /* Menu */
+      nav {
+        background-color: #bddcf5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
        
-       margin-top: -250px ;
       }
-      
-    
-  .texto p {
-      position:absolute;
-      font-size: 1.2rem;
-      text-shadow: 1px 1px 3px rgba(0,1,5,7.6);
-      text-align: center;
-      margin-top: -150px;
-      width: 100%;
-     margin-right: 100px;
 
-      
-    }
-                
-      
-    /* Menu de navegação responsivo */
-    nav {
-      background-color: #005599;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    
-    nav button {
-      background-color: #ffffff;
-      border: none;
-      padding: 10px 12px;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 0.9em;
-      color: #003366;
-      cursor: pointer;
-      transition: all 0.3s;
-      flex: 1 0 auto;
-      min-width: 120px;
-      max-width: 160px;
-    }
-    
-    nav button:hover {
-      background-color: #d0e4ff;
-      transform: translateY(-2px);
-    }
-    
-    /* Seções de conteúdo */
-    .section {
-      display: none;
-      padding: 30px 20px;
-      max-width: 1600px;
-      margin: 30px auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      width: 1220px;
-      border: solid blue;
-     }
-     hr {
-    border-color:blue;
-    width:80px;
-margin-left:0.2px;
-margin-top: 1px;
+      .menu-btn {
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        display: none;
+      }
 
-   }
-    
-    .section.active {
-      display: block;
-      animation: fadeIn 0.5s ease;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .section h2 {
-      color: #003366;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #005599;
-    }
-    
-    .section ul {
-      padding-left: 20px;
-      margin: 15px 0;
-    }
-    
-    .section li {
-      margin-bottom: 10px;
-      padding-left: 10px;
-    }
-    
-    /* Formulários responsivos */
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    form input, form select, form button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1em;
-    }
-    
-    form input:focus, form select:focus {
-      outline: none;
-      border-color: #005599;
-      box-shadow: 0 0 5px rgba(0, 85, 153, 0.5);
-    }
-    
-    form button {
-      background-color: #003366;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      transition: background-color 0.3s;
-      padding: 14px;
-    }
-    
-    form button:hover {
-      background-color: #00224d;
-    }
-    
-    /* Carrossel responsivo */
-    .slides-container {
-      position: relative;
-      max-width: 90%;
-      margin: 40px auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    
-    .slide {
-      flex: 0 0 100%;
-    }
-    
-    .slide img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    .navigation {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      padding: 0 10px;
-    }
-    
-    .navigation button {
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      font-size: 1.5em;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: background-color  0.3s;
-    }
-    
-    .navigation button:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    /* Rodapé */
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #003366;
-      color: white;
-      margin-top: 40px;
-    }
-    
-    footer p {
-      margin: 10px 0;
-    }
-    
-    /* Media Queries para responsividade */
-    @media (max-width: 768px) {
-      .capa {
-        padding: 80px 20px;
+      .menu-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 110px;
+        
+      
       }
-      
-      
-      nav button {
-        min-width: 110px;
-        padding: 10px;
-        font-size: 0.85em;
+
+      .menu-links button {
+        background-color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        color: #003366;
+        transition: all 0.3s;
+        ;
       }
-      
+
+      .menu-links button:hover {
+        background-color: #d0e4ff;
+        transform: translateY(-2px);
+      }
+
+      /* Conteúdo */
       .section {
-        margin: 20px 15px;
-        padding: 20px 15px;
-      }
-      
-      .slides-container {
-        max-width: 95%;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .capa {
-        padding: 60px 15px;
+        display: none;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 100px auto 30px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
-    nav {
-        gap: 5px;
-        padding: 10px 5px;
+      .section.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
       }
-      
-      nav button {
-        min-width: 80px;
-        padding: 5px 5px;
-        font-size: 0.70em;
-        width: 30px;
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
-      
-      .section {
-        margin: 15px 10px;
-        padding: 15px 10px;
-      }
-      
+
       .section h2 {
-        font-size: 1.3em;
+        color: #003366;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #005599;
+        padding-bottom: 5px;
       }
-      
-      form input, form select, form button {
-        padding: 10px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
       }
-      
+
+      form input,
+      form select,
+      form button {
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+      }
+
+      form button {
+        background-color: #003366;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      form button:hover {
+        background-color: #00224d;
+      }
+
+      /* Mensagem de sucesso */
+      .msg-sucesso {
+        display: none;
+        background-color: #d4edda;
+        color: #155724;
+        padding: 12px;
+        border-radius: 6px;
+        margin-top: 10px;
+        text-align: center;
+        animation: fadeIn 0.4s ease;
+      }
+
+      /* Carrossel */
+      .slides-container {
+        position: relative;
+        max-width: 90%;
+        margin: 40px auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        flex: 0 0 100%;
+      }
+
+      .slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+
       .navigation button {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2em;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
       }
-    
-    }
+
+      /* Rodapé */
+      footer {
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #003366;
+        color: white;
+        margin-top: 50px;
+      }
+
+      /* Responsivo */
+      @media (max-width: 768px) {
+        .texto h1 {
+          font-size: 2rem;
+        }
+
+        .texto p {
+          font-size: 1rem;
+        }
+
+        .menu-btn {
+          display: block;
+        }
+
+        .menu-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: #bddcf5;
+          padding: 10px 0;
+        }
+
+        .menu-links.show {
+          display: flex;
+        }
+
+        .section {
+          margin-top: 120px;
+          padding: 25px 15px;
+        }
+      }
