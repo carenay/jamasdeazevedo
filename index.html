@@ -32,6 +32,7 @@
       <div class="nav-container">
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <div class="menu-links" id="menuLinks">
+           <img src="imagem/logo.jpeg" alt="Logo da Empresa" class="logo">
           <button onclick="showSection('inicio')">Início</button>
           <button onclick="showSection('cursos')">Cursos</button>
           <button onclick="showSection('localizacao')">Localização</button>
@@ -41,7 +42,7 @@
           <button onclick="showSection('absorventes')">Absorventes</button>
           <button onclick="location.assign('https://portal.seduc.pi.gov.br/#!/')">
             Área do Professor
-          </button>
+          </button> 
         </div>
       </div>
     </nav>
@@ -59,13 +60,45 @@
 
     <section id="cursos" class="section">
       <h2>Cursos Disponíveis</h2>
+
       <ul>
-        <li><b>Administração</b> - 18 meses | Manhã/Tarde/Noite</li>
-        <li><b>Informática</b> - 24 meses | Manhã/Tarde</li>
-        <li><b>Enfermagem</b> - 24 meses | Tarde/Noite</li>
-        <li><b>Agente de Saúde</b> - 12 meses | Manhã/Tarde</li>
+        <b> Cursos Disponiveis </b>
+        <details>
+          <summary>Técnico emAdministração</summary>
+          <p>
+            O objetivo do curso técnico em administração é capacitar profissionais para executar atividades administrativas
+             e de gestão em empresas, pública ou privadas, de diferentes portes. Isso inclui a execução de rotinas de escritório, 
+             gestão de pessoas, análise de marketing e vendas, logística, finanças e o uso de sistemas de informação gerencial. O curso visa formar um profissional ético, 
+            criativo e eficaz, pronto para atuar em funções de apoio, execução e controle administrativo. O curso te duraçao média de 24 meses. </p>
+        </details>
+        <details>
+          <summary>Técnico em Informática</summary>
+          <p>
+          O curso de Técnico em Informática tem como objetivo formar profissionais-cidadãos técnicos de nível médio com competência técnica, ética e política, com elevado grau de responsabilidade e que contemple um novo perfil para saber, saber fazer e gerenciar atividades de concepção, especificação, projeto, implementação, avaliação, suporte e manutenção de sistemas e de tecnologias de processamento e transmissão de dados e informações, incluindo hardware, software, aspectos organizacionais e 
+          humanos, visando a aplicação na produção de bens, serviços e conhecimentos tecnológicos. O curso tem duração média de 24 meses.
+          </p>
+        </details>
+        <details>
+          <summary>Técnico em Enfermagem </summary>
+          <p>
+         O objetivo do curso técnico em enfermagem é formar profissionais qualificados para atuar no cuidado direto ao paciente, sob supervisão de
+          enfermeiros, nas ações de promoção, prevenção, recuperação e reabilitação da saúde. O curso visa desenvolver habilidades técnicas
+           para administrar medicamentos, realizar curativos, monitorar pacientes e auxiliar em procedimentos, além de competências interpessoais 
+           e comportamentais, como empatia e comunicação eficaz. O curso tem duração média de 24 meses.
+          </p>
+          </details>
+          <details>
+          <summary>Técnico em Agente Comunitário de Saúde </summary>
+          <p>
+       O objetivo do curso de Técnico em Agente Comunitário de Saúde (ACS) é formar profissionais 
+       capacitados para atuar nas equipes de saúde, promovendo a saúde e prevenindo doenças em nível 
+       comunitário. O curso visa habilitar o profissional para integrar o Sistema Único de Saúde 
+       (SUS) através de ações como visitas domiciliares, desenvolvimento de atividades educativas, coleta e registro
+        de dados, e articulação entre a comunidade e a rede de saúde. O curso tem duração média de 24 meses.
+          </p>
+          </details>
       </ul>
-    </section>
+   </section>
 
     <section id="localizacao" class="section">
       <h2>Localização</h2>
@@ -99,7 +132,7 @@
           <option>Administração</option>
           <option>Informática</option>
           <option>Enfermagem</option>
-          <option>Agente de Saúde</option>
+          <option>Agente Comunitário de Saúde</option>
         </select>
         <button type="submit">Enviar</button>
         <div class="msg-sucesso">✅ Enviado com sucesso!</div>
@@ -119,7 +152,7 @@
     <section id="lanche" class="section">
       <h2>Solicitação de Lanche</h2>
       <form onsubmit="return mostrarMensagem(this)">
-        <input type="text" placeholder="Nome do aluno" required />
+        <input type="text" placeholder="Digite ua matricula " required />
         <select required>
           <option value="">Turno</option>
           <option>Manhã</option>

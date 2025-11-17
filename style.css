@@ -78,7 +78,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
+        padding: 10px 20px ;
        
       }
 
@@ -96,6 +96,7 @@
         justify-content: center;
         gap: 10px;
         margin-left: 110px;
+         justify-content: space-between
         
       
       }
@@ -108,7 +109,8 @@
         font-weight: 600;
         color: #003366;
         transition: all 0.3s;
-        ;
+        cursor: pointer;  
+           
       }
 
       .menu-links button:hover {
@@ -233,6 +235,17 @@
         border-radius: 50%;
         cursor: pointer;
       }
+      .logo{
+        width: 80px;
+        height: 50px;
+        margin-right: 70px
+        
+        
+
+     
+      }
+
+
 
       /* Rodapé */
       footer {
@@ -263,6 +276,9 @@
           width: 100%;
           background-color: #bddcf5;
           padding: 10px 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
         }
 
         .menu-links.show {
@@ -272,5 +288,16 @@
         .section {
           margin-top: 120px;
           padding: 25px 15px;
+
+        }
+
+        .capa1 {
+        width: 100%;
+        height: auto;
+        
+
+        
+      
         }
       }
+    
