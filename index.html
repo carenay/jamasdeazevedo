@@ -19,6 +19,7 @@
 
   <body>
     <!-- Capa -->
+    
     <div class="capa">
       <img src="imagem/foto_capa.jpeg" alt="James de Azevedo" />
       <div class="texto">
@@ -26,13 +27,16 @@
         <p>Educação Técnica e Profissionalizante</p>
       </div>
     </div>
+    
 
     <!-- Menu -->
-    <nav>
+     <header>
+         <nav>
+          
       <div class="nav-container">
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <div class="menu-links" id="menuLinks">
-           <img src="imagem/logo.jpeg" alt="Logo da Empresa" class="logo">
+          <img src="imagem/logo.jpeg" alt="Logo da Empresa" class="logo">
           <button onclick="showSection('inicio')">Início</button>
           <button onclick="showSection('cursos')">Cursos</button>
           <button onclick="showSection('localizacao')">Localização</button>
@@ -46,7 +50,7 @@
         </div>
       </div>
     </nav>
-
+     </header>
     <!-- Seções -->
     <section id="inicio" class="section active">
       <h2>Bem-vindo!</h2>

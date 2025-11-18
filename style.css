@@ -9,6 +9,12 @@
         background: linear-gradient(180deg, #f7fbff 0%, #e4f0ff 100%);
         color: #333;
       }
+      header {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between;
+  
+}
 
       /* Capa */
       .capa {
@@ -72,13 +78,15 @@
         width: 100%;
         z-index: 999;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        justify-items: space-between  ;
+        
       }
 
       .nav-container {
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
         align-items: center;
-        padding: 10px 20px ;
+        padding: 5px ;
        
       }
 
@@ -88,6 +96,7 @@
         font-size: 1.8rem;
         cursor: pointer;
         display: none;
+     
       }
 
       .menu-links {
@@ -95,21 +104,24 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
-        margin-left: 110px;
-         justify-content: space-between
+        font-size: 20px;
         
-      
       }
+      header{
+        justify-content: space-between;
+       
+      }
+
 
       .menu-links button {
         background-color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 10px 15px;
         border-radius: 6px;
         font-weight: 600;
         color: #003366;
         transition: all 0.3s;
-        cursor: pointer;  
+        justify-content:flex-end;
            
       }
 
@@ -172,7 +184,7 @@
         color: #fff;
         border: none;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition:background-color 0.3s ease;
       }
 
       form button:hover {
@@ -236,9 +248,8 @@
         cursor: pointer;
       }
       .logo{
-        width: 80px;
-        height: 50px;
-        margin-right: 70px
+        width: 40px;
+        margin-right: 10px;
         
         
 
@@ -276,13 +287,14 @@
           width: 100%;
           background-color: #bddcf5;
           padding: 10px 0;
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.3s ease;
         }
 
         .menu-links.show {
           display: flex;
+        }
+        
+        .menu-links.active{
+          display:flex;
         }
 
         .section {
@@ -294,10 +306,17 @@
         .capa1 {
         width: 100%;
         height: auto;
-        
 
-        
-      
         }
+        
+        
+      .logo{
+        display: none;
+        
       }
+      
+
+      }
+
+      
     
